@@ -1,0 +1,24 @@
+# tie 璇█ Rust 鍙傝€冪紪璇戝櫒 workspace
+#
+# 鑱岃矗锛歵ie 璇█ Rust 鐗堢紪璇戝櫒/宸ュ叿閾惧悇 crate 鐨勮仛鍚堥厤缃€?# 璇存槑锛氭湰浠撳簱涓?tie 璇█鐨?Rust **鍙傝€?绉嶅瓙缂栬瘧鍣?*鈥斺€旇嚜涓?v2 涔嬪悗
+# tie 鐨勬寮忕紪璇戝櫒锛坱iec锛夊凡鐢?tie 璇█鑷韩閲嶅啓锛堝墠绔?IR/瑙ｉ噴鍣級锛?# 鏈粨搴撲繚鐣欎綔涓虹瀛愪笌鍙傝€冨疄鐜帮紙bootstrap seed锛夈€?[workspace]
+resolver = "2"
+members = [
+    "tie-frontend",
+    "tie-interp",
+    "tie-llvm",
+    "tie-prep",
+    "tie",
+    "tie-lsp",
+]
+
+# workspace 缁熶竴閰嶇疆锛?# - 姝ｅ紡鐗堟湰鍙风粺涓€缁存姢锛? 娈?semver x.y.z锛屽垵濮?0.1.0锛屾敞鎰忎笌鍚?crate 鐨?Cargo.toml 涓€鑷达級锛?# - 鏍煎紡鍙戣鐗堝彿锛堝勾浠?淇鍙凤級鐢ㄤ簬鍙戝竷娴佺▼锛?026.1 绛夛級锛屽搴?git tag锛屼笉鑰﹀悎 Cargo 鐗堟湰锛?# - 涓ユ牸鍛婅绛夌骇锛屾潨缁濇綔鍦ㄨ繍琛屾椂闂銆?[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/tie-lang/tiec_rust.git"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unused = { level = "warn", priority = -1 }
+
+[profile.release]
